@@ -1,11 +1,7 @@
-let altura;
-altura = prompt('Por favor ingrese su altura (en centimetros):','');
-if (altura <= 150) 
-    {alert('Persona de altura baja');}
-    else {if (altura<=170) 
-            {alert('Persona de altura media');}       
-            else { if (altura > 170) {alert('Persona alta');
-                                    }
+let sueldo;
+sueldo = prompt('Por favor ingrese su sueldo (Sin puntos ni comas):','');
 
-                 }
-         }      
+if (sueldo > 3000) { alert('Esta persona debe abonar impuestos');
+                    }
+                    else {alert('Está al día con hacienda')
+                          }
