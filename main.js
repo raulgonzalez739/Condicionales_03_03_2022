@@ -1,37 +1,21 @@
-alert('Vamos a determinar el mayor de 3 numeros')
+alert('Vamos a determinar si el estudiante pasa con 3 notas')
 let n1;
 let n2;
 let n3;
-n1=new Number(prompt('Ingrese en valor n1:',''));
-n2=new Number(prompt('Ingrese en valor n2:',''));
-n3=new Number(prompt('Ingrese en valor n3:',''));
-if ((n1>=n2) && (n1>=n3)) {
-    alert(`El numero mayor es: ${n1}`); 
-    if (n2>=n3) {
-        alert(`El numero medio es: ${n2} \n
-        El numero menor es: ${n3}`);
-    }else{
-        alert(`El numero medio es: ${n3} \n
-        El numero menor es: ${n2}`);
-    }
+n1=new Number(prompt('Ingrese el valor de la nota n1:',''));
+n2=new Number(prompt('Ingrese el valor de la nota n2:',''));
+n3=new Number(prompt('Ingrese el valor de la nota n3:',''));
+prom=(n1+n2+n3)/3;
+
+if (prom>=7) {
+    alert(`El estudiente es promocionado \n
+    su nota es: ${prom}`);    
 }else{
-    if (n2>=n3) {
-        alert(`El numero mayor es: ${n2}`); 
-        if (n1>=n3) {
-        alert(`El numero medio es: ${n1} \n
-        El numero menor es: ${n2}`);
-        }else{
-        alert(`El numero medio es: ${n3} \n
-        El numero menor es: ${n1}`);
-        }                
+    if (prom>=4) {
+        alert(`El estudiante es regular \n
+        su nota es: ${prom}`);
     }else{
-        alert(`El numero mayor es: ${n3}`); 
-    if (n2>=n1) {
-        alert(`El numero medio es: ${n2} \n
-        El numero menor es: ${n1}`);
-    }else{
-        alert(`El numero medio es: ${n1} \n
-        El numero menor es: ${n2}`);
-    }
+        alert(`El estudiante es reprobado \n
+        su nota es: ${prom}`);
     }
 }
