@@ -1,46 +1,37 @@
-let enciende, conectado;
-
-// if (enciende == 'Si') {
-//     alert('Felcidades, su bombillo está ok');
-// }
-// else {
-enciende = prompt('El bombillo enciende?? (Si/No):', '');
-while (enciende=='No') {
-    alert('Comprobar conexión')
-    conectado = prompt('Esta conectado?? (Si/No):','');
-    if (conectado=='No') {
-        enciende = prompt('El bombillo enciende?? (Si/No):', '');            
+alert('Vamos a determinar el mayor de 3 numeros')
+let n1;
+let n2;
+let n3;
+n1=new Number(prompt('Ingrese en valor n1:',''));
+n2=new Number(prompt('Ingrese en valor n2:',''));
+n3=new Number(prompt('Ingrese en valor n3:',''));
+if ((n1>=n2) && (n1>=n3)) {
+    alert(`El numero mayor es: ${n1}`); 
+    if (n2>=n3) {
+        alert(`El numero medio es: ${n2} \n
+        El numero menor es: ${n3}`);
+    }else{
+        alert(`El numero medio es: ${n3} \n
+        El numero menor es: ${n2}`);
     }
-    else{
-        alert('Comprobar Bombillo');
-        quemado= prompt('Esta quemado?? (Si/No):','');
-        if(quemado == "No"){
-            alert('LLevar a servicio');
-            enciende = '.';
+}else{
+    if (n2>=n3) {
+        alert(`El numero mayor es: ${n2}`); 
+        if (n1>=n3) {
+        alert(`El numero medio es: ${n1} \n
+        El numero menor es: ${n2}`);
         }else{
-            alert('Cambiar Bombillo');
-            enciende = prompt('El bombillo enciende?? (Si/No):', '');
-        } 
+        alert(`El numero medio es: ${n3} \n
+        El numero menor es: ${n1}`);
+        }                
+    }else{
+        alert(`El numero mayor es: ${n3}`); 
+    if (n2>=n1) {
+        alert(`El numero medio es: ${n2} \n
+        El numero menor es: ${n1}`);
+    }else{
+        alert(`El numero medio es: ${n1} \n
+        El numero menor es: ${n2}`);
+    }
     }
 }
-if(enciende != "."){
-    alert('Felcidades, su bombillo está ok');
-}
-
-    // do {
-    //     alert('Comprobar conexión');
-    //     conectado = prompt('Esta conectado?? (Si/No):','');
-    //     if (conectado == 'Si') {
-    //         alert('Comprobar Bombillo');
-    //         quemado = prompt('El bombillo está quemado??:','');
-    //     }
-    //     else{
-    //         alert('Conectar');
-            
-    //         do {
-    //             enciende = prompt('El bombillo enciende?? (Si/No):', '');
-    //         } while (conectado=='No');
-            
-    //     }
-    // } while (enciende=='No');
-// }
